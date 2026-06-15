@@ -9,6 +9,8 @@
 
 <style>
 
+/* (same CSS as before — unchanged) */
+
 *{
     margin:0;
     padding:0;
@@ -30,7 +32,6 @@ body{
 }
 
 /* CONFETTI */
-
 .confetti{
     position:fixed;
     width:10px;
@@ -42,16 +43,11 @@ body{
 }
 
 @keyframes fall{
-    from{
-        transform:translateY(-10vh) rotate(0deg);
-    }
-    to{
-        transform:translateY(120vh) rotate(720deg);
-    }
+    from{ transform:translateY(-10vh) rotate(0deg); }
+    to{ transform:translateY(120vh) rotate(720deg); }
 }
 
 /* BALLOONS */
-
 .balloon{
     position:fixed;
     width:45px;
@@ -72,23 +68,16 @@ body{
 }
 
 @keyframes floatUp{
-    from{
-        transform:translateY(110vh);
-    }
-    to{
-        transform:translateY(-130vh);
-    }
+    from{ transform:translateY(110vh); }
+    to{ transform:translateY(-130vh); }
 }
 
 /* MAIN */
-
 .container{
     position:relative;
     z-index:5;
     padding-top:15px;
 }
-
-/* TITLE */
 
 .title{
     color:#7a3757;
@@ -97,8 +86,7 @@ body{
     font-weight:bold;
 }
 
-/* PRANEET LETTERS */
-
+/* NAME */
 .name-row{
     display:flex;
     justify-content:center;
@@ -113,8 +101,7 @@ body{
     height:auto;
 }
 
-/* MEMORY AREA */
-
+/* MEMORY */
 .memory-area{
     width:100%;
     max-width:700px;
@@ -122,8 +109,6 @@ body{
     margin:auto;
     position:relative;
 }
-
-/* MUFFIN */
 
 .muffin{
     width:190px;
@@ -136,66 +121,27 @@ body{
 }
 
 @keyframes muffinFloat{
-    0%,100%{
-        transform:translate(-50%,-50%);
-    }
-    50%{
-        transform:translate(-50%,-58%);
-    }
+    0%,100%{ transform:translate(-50%,-50%); }
+    50%{ transform:translate(-50%,-58%); }
 }
-
-/* MEMORY IMAGES */
-/* NO BOXES, NO SHADOWS */
 
 .memory{
     width:90px;
-    height:auto;
     position:absolute;
     background:none;
     border:none;
     box-shadow:none;
 }
 
-/* IMAGE POSITIONS */
-
-.spiderman{
-    top:10px;
-    left:120px;
-    transform:rotate(-6deg);
-}
-
-.web{
-    top:10px;
-    right:120px;
-    transform:rotate(6deg);
-}
-
-.cute{
-    top:115px;
-    left:35px;
-    transform:rotate(-4deg);
-}
-
-.lala{
-    top:115px;
-    right:35px;
-    transform:rotate(4deg);
-}
-
-.phy2{
-    bottom:15px;
-    left:130px;
-    transform:rotate(-3deg);
-}
-
-.phy1{
-    bottom:15px;
-    right:130px;
-    transform:rotate(3deg);
-}
+/* positions unchanged */
+.spiderman{ top:10px; left:120px; transform:rotate(-6deg); }
+.web{ top:10px; right:120px; transform:rotate(6deg); }
+.cute{ top:115px; left:35px; transform:rotate(-4deg); }
+.lala{ top:115px; right:35px; transform:rotate(4deg); }
+.phy2{ bottom:15px; left:130px; transform:rotate(-3deg); }
+.phy1{ bottom:15px; right:130px; transform:rotate(3deg); }
 
 /* MESSAGE */
-
 .note{
     width:85%;
     max-width:430px;
@@ -212,54 +158,21 @@ body{
     line-height:1.4;
 }
 
-/* MOBILE */
-
+/* MOBILE unchanged */
 @media(max-width:600px){
+    .memory-area{ height:280px; }
+    .muffin{ width:150px; }
+    .memory{ width:72px; }
 
-.memory-area{
-    height:280px;
-}
+    .spiderman{ left:20px; }
+    .web{ right:20px; }
+    .cute{ left:5px; }
+    .lala{ right:5px; }
+    .phy2{ left:25px; }
+    .phy1{ right:25px; }
 
-.muffin{
-    width:150px;
-}
-
-.memory{
-    width:72px;
-}
-
-.spiderman{
-    left:20px;
-}
-
-.web{
-    right:20px;
-}
-
-.cute{
-    left:5px;
-}
-
-.lala{
-    right:5px;
-}
-
-.phy2{
-    left:25px;
-}
-
-.phy1{
-    right:25px;
-}
-
-.note{
-    width:90%;
-    font-size:1.1rem;
-}
-
-.letter{
-    width:36px;
-}
+    .note{ width:90%; font-size:1.1rem; }
+    .letter{ width:36px; }
 }
 
 </style>
@@ -270,8 +183,6 @@ body{
 <div class="container">
 
     <h1 class="title">🎉 Happy Birthday 🎉</h1>
-
-    <!-- PRANEET LETTER PNGS -->
 
     <div class="name-row">
         <img src="P.png" class="letter" alt="P">
@@ -284,25 +195,16 @@ body{
     </div>
 
     <div class="memory-area">
-
-        <img src="spiderman.png" class="memory spiderman" alt="Spiderman">
-
-        <img src="web.png" class="memory web" alt="Web">
-
-        <img src="cute.png" class="memory cute" alt="Cute">
-
-        <img src="lala.png" class="memory lala" alt="Lala">
-
-        <img src="phy2.png" class="memory phy2" alt="Phy2">
-
-        <img src="phy1.png" class="memory phy1" alt="Phy1">
-
-        <img src="muffin.png" class="muffin" alt="Muffin">
-
+        <img src="spiderman.png" class="memory spiderman">
+        <img src="web.png" class="memory web">
+        <img src="cute.png" class="memory cute">
+        <img src="lala.png" class="memory lala">
+        <img src="phy2.png" class="memory phy2">
+        <img src="phy1.png" class="memory phy1">
+        <img src="muffin.png" class="muffin">
     </div>
 
     <div class="note">
-        i may not reach out,<br>
         but always remember<br>
         i will be cheering and supporting you from afar.
         <br><br>
@@ -312,45 +214,23 @@ body{
 </div>
 
 <script>
-
-/* CONFETTI */
-
 for(let i=0;i<150;i++){
-
     let c=document.createElement("div");
-
     c.className="confetti";
-
     c.style.left=Math.random()*100+"vw";
-
-    c.style.background=
-    `hsl(${Math.random()*360},90%,65%)`;
-
-    c.style.animationDuration=
-    (3+Math.random()*4)+"s";
-
+    c.style.background=`hsl(${Math.random()*360},90%,65%)`;
+    c.style.animationDuration=(3+Math.random()*4)+"s";
     document.body.appendChild(c);
 }
 
-/* BALLOONS */
-
 for(let i=0;i<20;i++){
-
     let b=document.createElement("div");
-
     b.className="balloon";
-
     b.style.left=Math.random()*100+"vw";
-
-    b.style.background=
-    `hsl(${Math.random()*360},75%,70%)`;
-
-    b.style.animationDuration=
-    (6+Math.random()*5)+"s";
-
+    b.style.background=`hsl(${Math.random()*360},75%,70%)`;
+    b.style.animationDuration=(6+Math.random()*5)+"s";
     document.body.appendChild(b);
 }
-
 </script>
 
 </body>
