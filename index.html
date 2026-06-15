@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Praneet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    text-align:center;
+    font-family:"Times New Roman", serif;
+    background:linear-gradient(
+        135deg,
+        #ffd6e7,
+        #ffe6f0,
+        #fff2f7
+    );
+    position:relative;
+}
+
+/* CONFETTI */
+
+.confetti{
+    position:fixed;
+    width:10px;
+    height:10px;
+    top:-20px;
+    border-radius:2px;
+    animation:fall linear infinite;
+    z-index:1;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-10vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(120vh) rotate(720deg);
+    }
+}
+
+/* BALLOONS */
+
+.balloon{
+    position:fixed;
+    width:45px;
+    height:55px;
+    border-radius:50%;
+    animation:floatUp linear infinite;
+    z-index:2;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:35px;
+    background:rgba(255,255,255,0.7);
+    left:50%;
+    top:100%;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-130vh);
+    }
+}
+
+/* MAIN */
+
+.container{
+    position:relative;
+    z-index:5;
+    padding-top:15px;
+}
+
+/* TITLE */
+
+.title{
+    color:#7a3757;
+    font-size:2rem;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+/* PRANEET LETTERS */
+
+.name-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+}
+
+.letter{
+    width:42px;
+    height:auto;
+}
+
+/* MEMORY AREA */
+
+.memory-area{
+    width:100%;
+    max-width:700px;
+    height:320px;
+    margin:auto;
+    position:relative;
+}
+
+/* MUFFIN */
+
+.muffin{
+    width:190px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    animation:muffinFloat 3s ease-in-out infinite;
+    z-index:3;
+}
+
+@keyframes muffinFloat{
+    0%,100%{
+        transform:translate(-50%,-50%);
+    }
+    50%{
+        transform:translate(-50%,-58%);
+    }
+}
+
+/* MEMORY IMAGES */
+/* NO BOXES, NO SHADOWS */
+
+.memory{
+    width:90px;
+    height:auto;
+    position:absolute;
+    background:none;
+    border:none;
+    box-shadow:none;
+}
+
+/* IMAGE POSITIONS */
+
+.spiderman{
+    top:10px;
+    left:120px;
+    transform:rotate(-6deg);
+}
+
+.web{
+    top:10px;
+    right:120px;
+    transform:rotate(6deg);
+}
+
+.cute{
+    top:115px;
+    left:35px;
+    transform:rotate(-4deg);
+}
+
+.lala{
+    top:115px;
+    right:35px;
+    transform:rotate(4deg);
+}
+
+.phy2{
+    bottom:15px;
+    left:130px;
+    transform:rotate(-3deg);
+}
+
+.phy1{
+    bottom:15px;
+    right:130px;
+    transform:rotate(3deg);
+}
+
+/* MESSAGE */
+
+.note{
+    width:85%;
+    max-width:430px;
+    margin:10px auto;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(8px);
+    padding:18px;
+    border-radius:20px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+
+    font-family:'Shadows Into Light', cursive;
+    color:#5c3a4f;
+    font-size:1.3rem;
+    line-height:1.4;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.memory-area{
+    height:280px;
+}
+
+.muffin{
+    width:150px;
+}
+
+.memory{
+    width:72px;
+}
+
+.spiderman{
+    left:20px;
+}
+
+.web{
+    right:20px;
+}
+
+.cute{
+    left:5px;
+}
+
+.lala{
+    right:5px;
+}
+
+.phy2{
+    left:25px;
+}
+
+.phy1{
+    right:25px;
+}
+
+.note{
+    width:90%;
+    font-size:1.1rem;
+}
+
+.letter{
+    width:36px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="title">🎉 Happy Birthday 🎉</h1>
+
+    <!-- PRANEET LETTER PNGS -->
+
+    <div class="name-row">
+        <img src="P.png" class="letter" alt="P">
+        <img src="R.png" class="letter" alt="R">
+        <img src="A.png" class="letter" alt="A">
+        <img src="N.png" class="letter" alt="N">
+        <img src="E1.png" class="letter" alt="E">
+        <img src="E2.png" class="letter" alt="E">
+        <img src="T.png" class="letter" alt="T">
+    </div>
+
+    <div class="memory-area">
+
+        <img src="spiderman.png" class="memory spiderman" alt="Spiderman">
+
+        <img src="web.png" class="memory web" alt="Web">
+
+        <img src="cute.png" class="memory cute" alt="Cute">
+
+        <img src="lala.png" class="memory lala" alt="Lala">
+
+        <img src="phy2.png" class="memory phy2" alt="Phy2">
+
+        <img src="phy1.png" class="memory phy1" alt="Phy1">
+
+        <img src="muffin.png" class="muffin" alt="Muffin">
+
+    </div>
+
+    <div class="note">
+        i may not reach out,<br>
+        but always remember<br>
+        i will be cheering and supporting you from afar.
+        <br><br>
+        happy 18th 🤍
+    </div>
+
+</div>
+
+<script>
+
+/* CONFETTI */
+
+for(let i=0;i<150;i++){
+
+    let c=document.createElement("div");
+
+    c.className="confetti";
+
+    c.style.left=Math.random()*100+"vw";
+
+    c.style.background=
+    `hsl(${Math.random()*360},90%,65%)`;
+
+    c.style.animationDuration=
+    (3+Math.random()*4)+"s";
+
+    document.body.appendChild(c);
+}
+
+/* BALLOONS */
+
+for(let i=0;i<20;i++){
+
+    let b=document.createElement("div");
+
+    b.className="balloon";
+
+    b.style.left=Math.random()*100+"vw";
+
+    b.style.background=
+    `hsl(${Math.random()*360},75%,70%)`;
+
+    b.style.animationDuration=
+    (6+Math.random()*5)+"s";
+
+    document.body.appendChild(b);
+}
+
+</script>
+
+</body>
+</html>
